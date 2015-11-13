@@ -2,6 +2,9 @@
 
 namespace HtaConverter.Options
 {
+    /// <summary>
+    /// class stores the HTA:Application Tag options.
+    /// </summary>
     public class HtaOptions
     {
     public String Id { get; set; }

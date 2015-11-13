@@ -4,6 +4,9 @@ using HtaConverter.Options;
 
 namespace HtaConverter
 {
+    /// <summary>
+    /// Sets the HTA:Application tag options.
+    /// </summary>
   public partial class FrmHtaOptions : Form
   {
     private HtaOptions _ops = new HtaOptions();

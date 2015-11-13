@@ -5,6 +5,9 @@ using System.Text;
 
 namespace HtaConverter.Web
 {
+    /// <summary>
+    /// Client object gets html from website.
+    /// </summary>
   class Client
   {
     private String _uri;
@@ -15,7 +18,10 @@ namespace HtaConverter.Web
     private String _data;
 
     public String Data { get { return _data; }}
-
+    /// <summary>
+    /// Client constuctor establishes connections.
+    /// </summary>
+    /// <param name="uri"></param>
     public Client(String uri)
     {
       try
@@ -30,7 +36,10 @@ namespace HtaConverter.Web
         throw;
       }
     }
-
+    /// <summary>
+    /// gets html content.
+    /// </summary>
+    /// <returns>True if OK. False if not found.</returns>
     public bool Get()
     {
        bool status = false;

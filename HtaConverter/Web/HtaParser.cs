@@ -5,6 +5,9 @@ using HtmlAgilityPack;
 
 namespace HtaConverter.Web
 {
+    /// <summary>
+    /// HTA Parser class. Formats HTML to work in HTA format.
+    /// </summary>
   public class HtaParser
   {
     private HtmlDocument _hta = new HtmlDocument();
@@ -26,7 +29,9 @@ namespace HtaConverter.Web
       _HtaScripts(htaops);
       _FixUrls();
     }
-    //to fix broken links
+    /// <summary>
+    /// _FilUrls(): Converts Relative URLs to Absolute URLs.
+    /// </summary>
     private void _FixUrls()
     {
       _url = new Uri(_baseUrl);
@@ -91,7 +96,11 @@ namespace HtaConverter.Web
         }
       }
     }
-    //add local scripts.
+    /// <summary>
+    /// Adds Local Java and VB Scripts.
+    /// This can allow you to add to the remote site.
+    /// </summary>
+    /// <param name="htaops"></param>
     private void _HtaScripts(HtaOptions htaops)
     {
       if (htaops.LocalJavaScript)
@@ -115,7 +124,10 @@ namespace HtaConverter.Web
       }
 
     }
-    //add a local stylsheet.
+    /// <summary>
+    /// Links a local css Stylesheet.
+    /// </summary>
+    /// <param name="htaops"></param>
     private void _HtaStyles(HtaOptions htaops)
     {
       if (htaops.LocalStyleSheet)
@@ -130,7 +142,10 @@ namespace HtaConverter.Web
 
       }
     }
-    //add hta:application header.
+    /// <summary>
+    /// Adds the local HTA:Application header and all the options.
+    /// </summary>
+    /// <param name="htaops"></param>
     private void _HtaHeader(HtaOptions htaops)
     {
       

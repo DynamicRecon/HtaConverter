@@ -5,13 +5,15 @@ using HtaConverter.Web;
 
 namespace HtaConverter
 {
+    /// <summary>
+    /// Main converter form.
+    /// </summary>
   public partial class FrmHtaConverter : Form
   {
     public FrmHtaConverter()
     {
       InitializeComponent();
     }
-
     private void btnBrowse_Click(object sender, EventArgs e)
     {
       FolderBrowserDialog folderDlg = new FolderBrowserDialog();
